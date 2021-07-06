@@ -19,6 +19,8 @@
 		C9179B1D2694D3990099ACAF /* apiKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9179B1C2694D3990099ACAF /* apiKey.plist */; };
 		C9179B1F2694D5FC0099ACAF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9179B1E2694D5FC0099ACAF /* Constants.swift */; };
 		C9B1CFAB2694E2B20092F8B6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1CFAA2694E2B20092F8B6 /* Response.swift */; };
+		C9B1CFAE269500690092F8B6 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1CFAD269500690092F8B6 /* VideoTableViewCell.swift */; };
+		C9B1CFB5269508A20092F8B6 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1CFB4269508A20092F8B6 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		C9179B1C2694D3990099ACAF /* apiKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = apiKey.plist; sourceTree = "<group>"; };
 		C9179B1E2694D5FC0099ACAF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C9B1CFAA2694E2B20092F8B6 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		C9B1CFAD269500690092F8B6 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		C9B1CFB4269508A20092F8B6 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,19 +74,61 @@
 			children = (
 				C9179B002694D1050099ACAF /* AppDelegate.swift */,
 				C9179B022694D1050099ACAF /* SceneDelegate.swift */,
-				C9179B042694D1050099ACAF /* ViewController.swift */,
-				C9179B1E2694D5FC0099ACAF /* Constants.swift */,
-				C9179B162694D3020099ACAF /* Video.swift */,
-				C9179B182694D3160099ACAF /* Model.swift */,
-				C9B1CFAA2694E2B20092F8B6 /* Response.swift */,
-				C9179B1A2694D3740099ACAF /* ApiKey.swift */,
-				C9179B062694D1050099ACAF /* Main.storyboard */,
+				C9B1CFB3269500DD0092F8B6 /* Helpers */,
+				C9B1CFB2269500C10092F8B6 /* Storyboards */,
+				C9B1CFB1269500B90092F8B6 /* Models */,
+				C9B1CFB0269500910092F8B6 /* Views */,
+				C9B1CFAF269500850092F8B6 /* ViewControllers  */,
 				C9179B092694D10A0099ACAF /* Assets.xcassets */,
-				C9179B0B2694D10A0099ACAF /* LaunchScreen.storyboard */,
 				C9179B0E2694D10A0099ACAF /* Info.plist */,
 				C9179B1C2694D3990099ACAF /* apiKey.plist */,
 			);
 			path = "Youtube-app";
+			sourceTree = "<group>";
+		};
+		C9B1CFAF269500850092F8B6 /* ViewControllers  */ = {
+			isa = PBXGroup;
+			children = (
+				C9179B042694D1050099ACAF /* ViewController.swift */,
+			);
+			path = "ViewControllers ";
+			sourceTree = "<group>";
+		};
+		C9B1CFB0269500910092F8B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9B1CFAD269500690092F8B6 /* VideoTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C9B1CFB1269500B90092F8B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9179B162694D3020099ACAF /* Video.swift */,
+				C9179B182694D3160099ACAF /* Model.swift */,
+				C9B1CFAA2694E2B20092F8B6 /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C9B1CFB2269500C10092F8B6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C9179B062694D1050099ACAF /* Main.storyboard */,
+				C9179B0B2694D10A0099ACAF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C9B1CFB3269500DD0092F8B6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C9179B1E2694D5FC0099ACAF /* Constants.swift */,
+				C9179B1A2694D3740099ACAF /* ApiKey.swift */,
+				C9B1CFB4269508A20092F8B6 /* CacheManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +208,10 @@
 				C9179B032694D1050099ACAF /* SceneDelegate.swift in Sources */,
 				C9179B192694D3160099ACAF /* Model.swift in Sources */,
 				C9179B1F2694D5FC0099ACAF /* Constants.swift in Sources */,
+				C9B1CFB5269508A20092F8B6 /* CacheManager.swift in Sources */,
 				C9179B1B2694D3740099ACAF /* ApiKey.swift in Sources */,
 				C9179B172694D3020099ACAF /* Video.swift in Sources */,
+				C9B1CFAE269500690092F8B6 /* VideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
