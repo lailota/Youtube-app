@@ -15,7 +15,7 @@ struct Secret: Decodable {
 struct ApiValue {
     static func get() -> Secret {
         guard let url = Bundle.main.url(forResource: "apiKey", withExtension: "plist") else {
-            fatalError("Could't find file 'Secret.plist'in your Bundle.")
+            fatalError("Could't find file 'apiKey.plist'in your Bundle.")
         }
         do {
             let decoder = PropertyListDecoder()

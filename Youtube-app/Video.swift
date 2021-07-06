@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Video: Decodable {
+struct Video : Decodable {
     
-    var videoID = ""
+    var videoId = ""
     var title = ""
     var description = ""
     var thumbnail = ""
@@ -19,7 +19,7 @@ struct Video: Decodable {
         
         case snippet
         case thumbnails
-        case hight
+        case high
         case resourceId
         
         case published = "publishedAt"
@@ -27,25 +27,26 @@ struct Video: Decodable {
         case description
         case thumbnail = "url"
         case videoId
+        
     }
     
-    init (from decoder : Decoder) throws {
+    init (from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let snippetContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .snippet)
         
-        // Parse title, description and publish date
+        // Parse title, description e publish date
         self.title = try snippetContainer.decode(String.self, forKey: .title)
         self.description = try snippetContainer.decode(String.self, forKey: .description)
         self.published = try snippetContainer.decode(Date.self, forKey: .published)
         
         // Parse thumbnails
         let thumbnailContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
-        let highContainer = try thumbnailContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .hight)
+        let highContainer = try thumbnailContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)
         self.thumbnail = try highContainer.decode(String.self, forKey: .thumbnail)
         
-        // Parse Video id
+        // Parse Video ID
         let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
-        self.videoID = try resourceIdContainer.decode(String.self, forKey: .videoId)
+        self.videoId = try resourceIdContainer.decode(String.self, forKey: .videoId)
     }
 }
