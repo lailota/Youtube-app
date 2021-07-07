@@ -55,7 +55,7 @@ class Model {
                 //dump(response)
             }
             catch {
-                print("??????????????????/VAZIO")
+                print("Estou vazio")
             }
             
         }
